@@ -74,7 +74,7 @@ a:hover, .search:hover, .user:hover {
 body{
     background-image: url('https://images2.alphacoders.com/110/thumb-1920-1108220.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-color: #292929;
     background-blend-mode: multiply;
@@ -103,7 +103,7 @@ body{
 #films .card-body h4 {
     font-size: 20px;
 }
-#films .film-rate{
+.film-rate{
     color: gold;
     display: flex;
     align-items: center;

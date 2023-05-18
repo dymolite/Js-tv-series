@@ -1,14 +1,18 @@
+
 for (let i = 0; i < 13; i++) {
     $.ajax({
         method: 'GET',
-        url: 'https://api.tvmaze.com/shows/' + i,
+        url: 'https://api.tvmaze.com/shows/'+i,
         success: function (res) {
+            
             $('#films .row').append(`
                 <div class="col-3">
                         <div class="film-card p-4">
                             <div class="film-img badge">
-                                <img src="${res.image.medium}" alt="">
-                                <span class="status"></span>
+                                <a target="_blank" href="details.html?id=${res.id}">
+                                    <img src="${res.image.medium}" alt="">
+                                    <span class="status"></span>
+                                </a>
                             </div>
                             <div class="card-body">
                                 <div class="film-rate">
@@ -22,7 +26,7 @@ for (let i = 0; i < 13; i++) {
                                 <div class="film-genres"><p>${res.genres}</p></div>
                             </div>
                             <div class="card-footer">
-                                <a href="" class="btn btn-main">details</a>
+                                <a target="_blank" href="details.html?id=${res.id}" class="btn btn-main">details</a>
                             </div>
                         </div>
                     </div>
@@ -35,4 +39,3 @@ for (let i = 0; i < 13; i++) {
         }
     })
 }
-console.log($('#films .row'));
